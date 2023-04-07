@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        width: 100%;
+        height: 100px;
+        overflow-x: auto;    
+        position: relative;
+      }
+
+      .content {
+        height: 100%;
+        width: 200px;
+        line-height: 50px;
+        position: absolute;
+        background-color: #bfa;
+        /* word-wrap: break-word; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">
+        adwwwwwwwwwwwwwwwwwwwwwwwwwwwadwwwwwwwwwadwwwwwwwwwwwwwwwwwwwwwwwwwwwadwwwwwwwwwadwwwwwwwwwwwwwwwwwwwwwwwwwwwadwwwwwwwwwadwwwwwwwwwwwwwwwwwwwwwwwwwwwadwwwwwwwwwadwwwwwwwwwwwwwwwwwwwwwwwwwwwadwwwwwwwwwadwwwwwwwwwwwwwwwwwwwwwwwwwwwadwwwwwwwwwadwwwwwwwwwwwwwwwwwwwwwwwwwwwadwwwwwwwwwadwwwwwwwwwwwwwwwwwwwwwwwwwwwadwwwwwwwwwadwwwwwwwwwwwwwwwwwwwwwwwwwwwadwwwwwwwwwadwwwwwwwwwwwwwwwwwwwwwwwwwwwadwwwwwwwwwadwwwwwwwwwwwwwwwwwwwwwwwwwwwadwwwwwwwwwadwwwwwwwwwwwwwwwwwwwwwwwwwwwadwwwwwwwwwadwwwwwwwwwwwwwwwwwwwwwwwwwwwadwwwwwwwwwadwwwwwwwwwwwwwwwwwwwwwwwwwwwadwwwwwwwwwadwwwwwwwwwwwwwwwwwwwwwwwwwwwadwwwwwwwwwadwwwwwwwwwwwwwwwwwwwwwwwwwwwadwwwwwwwwwadwwwwwwwwwwwwwwwwwwwwwwwwwwwadwwwwwwwwwadwwwwwwwwwwwwwwwwwwwwwwwwwwwadwwwwwwwwwadwwwwwwwwwwwwwwwwwwwwwwwwwwwadwwwwwwwwwadwwwwwwwwwwwwwwadwwwwwwwwwwadwwwwwwwwwwadwwwwwwwwwwadwwwwwwwwwwadwwwwwwwwwwadwwwwwwwwwwadwwwwwwwwwwadwwwwwwwwwwadwwwwwwwwwwadwwwwwwwwwwadwwwwwwwwwwadwwwwwwwwwwwwwwwwwwwwwwwadwwwwwwwwwadwwwwwwwwwwwwwwwwwwwwwwwwwwwadwwwwwwwww
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript">
+    const element = document.querySelector(".container");
+    console.log(element);
+    const scrollDistance = 50; // 控制每次滚动的距离
+    document.addEventListener("wheel", (event) => {
+      console.log(event);
+      const deltaY = event.deltaY;
+      const direction = deltaY > 0 ? "down" : "up";
+      console.log(element + "@@@@@@@@@@@@");
+      if (direction === "down") {
+        console.log(element.scrollLeft);
+        element.scrollLeft += scrollDistance;
+      } else {
+        element.scrollLeft -= scrollDistance;
+      }
+    });
+  </script>
+</html>
