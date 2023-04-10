@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formdata</title>
+  </head>
+  <body>
+    <script>
+      // Create a FormData object
+      const formData = new FormData()
+
+      // Append key-value pairs to the FormData object
+      formData.append('username', 'JohnDoe')
+      formData.append('email', 'john.doe@example.com')
+      console.log( typeof formData) // object
+      console.log(formData) 
+      // Get values from the FormData object using the get() method
+      const username = formData.get('username')
+      const email = formData.get('email')
+
+      console.log('Username:', username) // Output: Username: JohnDoe
+      console.log('Email:', email) // Output: Email: john.doe@example.com
+
+      // Attempt to get a non-existent key
+      const notFound = formData.get('notFound')
+      console.log('Not Found:', notFound) // Output: Not Found: null
+    </script>
+  </body>
+</html>
