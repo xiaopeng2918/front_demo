@@ -43,8 +43,13 @@ myMap.set('age', 18)
 myMap.set({}, { name: 'yxp' })
 myMap.set('name', 'yxp11')
 console.log(myMap) // Map(4) { 1 => 5, 'name' => 'yxp', 'age' => 18, {} => { name: 'yxp' } }
-
-myMap.forEach(function(key, value) {
-  console.log(key + ":" + value);
+// forEach
+myMap.forEach(function (value, key) {
+  console.log(key + ':' + value + 'forEach')
 })
 
+// for of
+
+for ([key, value] of myMap) {
+  console.log(key + ':' + value)
+}
