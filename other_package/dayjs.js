@@ -22,3 +22,7 @@ console.log(dayObj.$d) // date:2023-04-14T18:49:08.000Z
 const dateObj = dayObj.$d
 
 console.log(dayjs(dateObj).valueOf()) //1681498148000
+
+console.log(dayjs(1681498148000).toISOString()) // "2023-04-14T18:49:08.000Z"
+
+console.log(dayjs('2023-04-13').format('YYYY-MM-DD HH:mm:ss'));
