@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      .container {
+        overflow: hidden;
+      }
+      .main {
+        background-color: lightblue;
+        padding: 20px;
+        float: left;
+        width: 100%;
+        z-index: 999;
+      }
+      .left {
+        float: left;
+        width: 200px;
+        background-color: lightgreen;
+        padding: 20px;
+        margin-left: -100%;
+      }
+      .right {
+        float: left;
+        width: 200px;
+        background-color: lightcoral;
+        padding: 20px;
+        margin-left: -200px;
+      }
+      /* 
+    首先，我们将主内容区 .main 的宽度设置为 100%，使其占据整个容器的宽度。然后将 .main、.left 和 .right 元素都设置为 float: left，使它们在同一行显示。
+
+由于主内容区的宽度为 100%，左侧栏 .left 和右侧栏 .right 会被挤到下一行。此时，我们可以使用负 margin-left 值来调整它们的位置。
+
+对于左侧栏，我们设置 margin-left: -100%  外边距设置百分比 是相对于包含快的宽度而言的 ，由于main盒子为100%即为包含块的宽度，而就需要左侧盒子向左移动main盒子的宽度，所以设置100%即可。这会使左侧栏向左移动一个等于容器宽度的距离，将其放置在主内容区的左侧。
+
+对于右侧栏，我们设置 margin-left: -200px 由于左侧盒子设置外边距了 右侧盒子就移动到第二行首位 设置外边距向左移动自身宽度即可（假设右侧栏的宽度为 200px）。这会使右侧栏向左移动 200px，从而将其放置在主内容区的右侧。
+    
+    */
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="main">主内容区</div>
+      <div class="left">左侧栏</div>
+      <div class="right">右侧栏</div>
+    </div>
+  </body>
+</html>
