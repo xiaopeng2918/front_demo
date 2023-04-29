@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>自适应Home页面</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      .header {
+        background-color: #333;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 100;
+      }
+
+      .navbar {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 60px;
+      }
+
+      .navbar a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+      }
+
+      .navbar a:hover {
+        color: #ddd;
+      }
+
+      main {
+        margin-top: 60px;
+        padding: 20px;
+        text-align: center;
+      }
+
+      footer {
+        background-color: #333;
+        color: white;
+        padding: 10px;
+        text-align: center;
+      }
+      .search-box {
+        position: relative;
+      }
+
+      .search-box input[type='text'] {
+        padding-right: 30px; /* 为搜索图标留出空间 */
+        border: 2px solid #ccc; /* 修改输入框边框 */
+        border-radius: 4px; /* 圆角边框 */
+        font-size: 16px;
+      }
+
+      .search-box i.fa {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        font-size: 20px;
+        color: #999;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <a href="#">首页</a>
+        <a href="#">关于我们</a>
+        <a href="#">服务</a>
+        <a href="#">联系我们</a>
+        <div class="search-box">
+          <input type="text" placeholder="搜索..." />
+          <i class="fa fa-search"></i>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <h1>欢迎来到我们的网站！</h1>
+      <p>这是一个自适应的Home页面。</p>
+    </main>
+    <footer>
+      <p>版权所有 &copy; 2023</p>
+    </footer>
+  </body>
+</html>
